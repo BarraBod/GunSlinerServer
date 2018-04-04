@@ -13,6 +13,7 @@ server.listen(server_port, function(){
 
 io.configure(function(){
     self.io.set("transports", ["websocket"]);
+});
 	
 io.on('connection', function(socket){
 	console.log("Player Connected!");
