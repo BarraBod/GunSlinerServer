@@ -9,7 +9,7 @@ var counter = 0;
 	
 server.listen(server_port, function(){
 	console.log("Server is now running on port: " + server_port);
-};
+});
 
 io.configure(function(){
     self.io.set("transports", ["websocket"]);
