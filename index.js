@@ -5,7 +5,7 @@ var io = require('socket.io')(server);
 var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var players = [];
 var counter = 0;
-//this is a test
+//this is another test
 
 server.listen(server_port, function(){
 	console.log("Server is now running...");
