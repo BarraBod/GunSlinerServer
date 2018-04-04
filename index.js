@@ -6,11 +6,14 @@ var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var players = [];
 var counter = 0;
 //this is another test
-
+	
 server.listen(server_port, function(){
 	console.log("Server is now running on port: " + server_port);
 });
 
+io.configure(function(){
+    self.io.set("transports", ["websocket"]);
+	
 io.on('connection', function(socket){
 	console.log("Player Connected!");
 	players.push(new player(0, 0));
