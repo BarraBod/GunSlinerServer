@@ -8,7 +8,7 @@ var counter = 0;
 //this is another test
 
 server.listen(server_port, function(){
-	console.log("Server is now running...");
+	console.log("Server is now running on port: " + server_port);
 });
 
 io.on('connection', function(socket){
