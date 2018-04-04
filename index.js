@@ -2,10 +2,11 @@
 var app = require('express')();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 var players = [];
 var counter = 0;
 
-server.listen(8080, function(){
+server.listen(server_port, function(){
 	console.log("Server is now running...");
 });
 
